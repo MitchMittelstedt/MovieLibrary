@@ -27,6 +27,7 @@ namespace MovieLibrary.Controllers
 
         // GET: api/Movies/5
         [ResponseType(typeof(Movie))]
+        [AllowCrossSite]
         public IHttpActionResult Get(int id)
         {
             Movie movie = db.Movies.Where(x => x.Id == id).Single();
@@ -40,6 +41,7 @@ namespace MovieLibrary.Controllers
 
         // PUT: api/Movies/5
         [ResponseType(typeof(void))]
+        [AllowCrossSite]
         public IHttpActionResult PutMovie(int id, Movie movie)
         {
             if (!ModelState.IsValid)
@@ -75,6 +77,7 @@ namespace MovieLibrary.Controllers
 
         // POST: api/Movies
         [ResponseType(typeof(Movie))]
+        [AllowCrossSite]
         public IHttpActionResult PostMovie(Movie movie)
         {
             if (!ModelState.IsValid)
@@ -90,6 +93,7 @@ namespace MovieLibrary.Controllers
 
         // DELETE: api/Movies/5
         [ResponseType(typeof(Movie))]
+        [AllowCrossSite]
         public IHttpActionResult DeleteMovie(int id)
         {
             Movie movie = db.Movies.Find(id);
