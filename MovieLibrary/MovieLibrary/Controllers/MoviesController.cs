@@ -30,7 +30,7 @@ namespace MovieLibrary.Controllers
         [AllowCrossSite]
         public IHttpActionResult Get(int id)
         {
-            Movie movie = db.Movies.Where(x => x.Id == id).Single();
+            Movie movie = db.Movies.Find(id);
             if (movie == null)
             {
                 return NotFound();
@@ -40,6 +40,7 @@ namespace MovieLibrary.Controllers
         }
 
         // PUT: api/Movies/5
+        [HttpPut]
         [ResponseType(typeof(void))]
         [AllowCrossSite]
         public IHttpActionResult PutMovie(int id, Movie movie)
