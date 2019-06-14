@@ -1,4 +1,88 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <title>Movie Library</title> 
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+        <div id="root"></div>
+                
+        <button id="show-all" onclick="showAllMovies()">Show All Movies</button>    
+        <br><br>
+        <input type="text" id="title" name="title" placeholder="Movie Name" />            
+        <input type="text" id="genre" name="genre" placeholder="Movie Genre" />
+        <input type="text" id="directorname" name="directorname" placeholder="Director's Name" />          
+        <button onclick="postMovie()">Add Movie</button>
+        <br><br>
+        <input type="text" id="search" name="search" placeholder="Search Here"/>
+        <button onclick="showAllMovies()">Search Movie</button>
+          
+    <table>          
+        <thead>                   
+            <tr>                       
+                <th>Title</th>                      
+                <th>Genre</th>                      
+                <th>Director Name</th>                   
+            </tr>               
+        </thead>               
+        <tbody class="tableBody">               
+        </tbody>                     
+    </table> 
+         
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>       
+    <script src="scripts.js"> </script>            
+</body>
+</html>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Movie Library</title>
@@ -6,11 +90,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name=“description” content=“Description of the page content” />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">  
-<link rel="stylesheet" type="text/css" href="styles.css">
+
+<script>
+function localApiPost() {
+    document.getElementById("post").innerHTML = "Create."
+}
+    </script>
 </head>
 
+
 <body>
-    <div id="root"></div>
+    <form id="post">
+        <button onclick="getElementById('post').innerHTML">Create.</button>
+    </form>
     <script src="scripts.js"></script>
 </body>
+ -->

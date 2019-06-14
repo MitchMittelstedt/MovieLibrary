@@ -77,14 +77,15 @@ namespace MovieLibrary.Controllers
         }
 
         // POST: api/Movies
+        [HttpPost]
         [ResponseType(typeof(Movie))]
         [AllowCrossSite]
         public IHttpActionResult PostMovie(Movie movie)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             db.Movies.Add(movie);
             db.SaveChanges();
